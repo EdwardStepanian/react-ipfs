@@ -4,13 +4,10 @@ import Alert from '@mui/material/Alert';
 import Button from '@mui/material/Button';
 
 import type { SnackbarKey } from 'notistack';
-// eslint-disable-next-line
-// @ts-ignore
 import { useRegisterSW } from 'virtual:pwa-register/react';
 
 import useNotifications from '@/store/notifications';
 
-// TODO (Suren): this should be a custom hook :)
 function SW() {
   const [, notificationsActions] = useNotifications();
   const notificationKey = useRef<SnackbarKey | null>(null);
